@@ -25,7 +25,7 @@ public class A1Novice {
 			}
 			// Print out the first initial of the first name, followed by the last name,
 			// Followed by the total cost
-			String output = firstname.charAt(0) + ". " + lastname + ": " + total;
+			String output = firstname.charAt(0) + ". " + lastname + ": " + String.format("%.2f", total);
 			System.out.println(output);
 		}
 	scan.close();	
