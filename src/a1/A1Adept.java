@@ -41,7 +41,7 @@ public class A1Adept {
 				// Retrieves the item prices from an array
 				// Adds this price to the basket total
 				for (int k = 0; k < itemcount; k++) {
-					if (itemname == foodnames[k]) {
+					if (itemname.equals(foodnames[k])) {
 						baskettotal += prices[k] * quantity;
 					}
 				}
