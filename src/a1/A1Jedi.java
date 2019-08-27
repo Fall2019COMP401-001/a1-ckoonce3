@@ -19,8 +19,6 @@ public class A1Jedi {
 			foodnames[i] = scan.next();
 			// Scan through the food prices
 			scan.nextDouble();
-			foodcusts[i] = 0;
-			foodquants[i] = 0;
 		}
 		// Next scan item is the number of customers
 		int custcount = scan.nextInt();
@@ -31,14 +29,21 @@ public class A1Jedi {
 			scan.next();
 			// Next value is the number of food items
 			int basketcount = scan.nextInt();
+			// Create a food tracking array to see which foods the customer has purchased
+			boolean[] foodtrack = new boolean[itemcount];
 			// Add basket items to the food totals
 			for (int j = 0; j<basketcount; j++) {
 				int quantity = scan.nextInt();
 				String itemname = scan.next();
 				for (int k=0; k<itemcount; k++) {
 					if (itemname.equals(foodnames[k])) {
-						foodcusts[k]++;
 						foodquants[k] += quantity;
+						// Add a customer to the food amount only if the customer
+						// has not previously purchased the food
+						if (! foodtrack[k]) {
+							foodcusts[k]++;
+							foodtrack[k] = true;
+						}
 					}
 				}
 			}
