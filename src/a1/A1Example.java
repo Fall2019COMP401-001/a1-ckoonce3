@@ -25,9 +25,7 @@ public class A1Example {
 		
 		int[] values = new int[count];
 		
-		
-		// Read values into the array
-		
+	
 		for (int i=0; i<values.length; i++) {
 			values[i] = scan.nextInt();
 		}

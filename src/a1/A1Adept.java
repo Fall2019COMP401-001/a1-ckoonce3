@@ -32,7 +32,7 @@ public class A1Adept {
 			String firstname = scan.next();
 			String lastname = scan.next();
 			// Number of items each customer purchases
-			int basketcount = scan.Int();
+			int basketcount = scan.nextInt();
 			// Takes the total cost of the basket
 			double baskettotal = 0;
 			for (int j = 0; j < basketcount; j++) {
