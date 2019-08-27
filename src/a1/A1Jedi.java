@@ -22,7 +22,6 @@ public class A1Jedi {
 			foodcusts[i] = 0;
 			foodquants[i] = 0;
 		}
-		System.out.println("Hello");
 		// Next scan item is the number of customers
 		int custcount = scan.nextInt();
 		// Add to food quantities for each customer
